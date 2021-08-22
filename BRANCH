@@ -1,0 +1,27 @@
+git branch name //создать ветку
+git branch -D name //удалить ветку
+git branch -m name newname //переименовать ветку
+git checkout -b name //создать ветку и переместиться в неё
+git checkout name //переместиться в ветку
+git switch - //вернуться на прежнюю ветку
+git push origin --all //запушить все ветки
+git push origin -u name //запушить name ветку
+git cherry-pick "commit" - скопировать 1 или несколько коммитов в другую ветку.
+
+1. На локальном репозитории сделать ветки //git branch Postman 
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+2. Запушить все ветки на внешний репозиторий //git push origin -all
+3. В ветке Bug Reports сделать текстовый документ со структурой баг репорта //git checkout Bug_reports git touch file.txt
+4. Запушить структуру багрепорта на внешний репозиторий //git commit -a -m "structure bug reports" git push origin Bug_reports
+5. Вмержить ветку Bug Reports в Main //git checkout (или git switch) Main git merge Bug_reports
+6. Запушить main на внешний репозиторий. //git push -u origin namebranch
+7. В ветке CheckLists набросать структуру чек листа. //git checkout Checklists touch Structure.txt vim...
+8. Запушить структуру на внешний репозиторий //git commit -a -m "structure checklists file" git push origin Checklists
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main //после пуша сразу появится кнопка Request
+10. Синхронизировать Внешнюю и Локальную ветки Main // git commit -a -m "Main Branch" git push git pull
